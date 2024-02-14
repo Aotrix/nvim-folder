@@ -14,10 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 -- lazy setup
 require('lazy').setup({
     -- Loading theme
-    {  "rebelot/kanagawa.nvim",
-    -- "ellisonleao/gruvbox.nvim",
+    { "rose-pine/neovim",
     config = function()
-        require('theme/kanagawa')
+        require('theme/rose-pine')
     end,},
     
     -- LSP
@@ -67,8 +66,6 @@ require('lazy').setup({
         require('statusline/statusline')
     end
     },
-    {"rose-pine/neovim"},
-    {"tiagovla/tokyodark.nvim"},
     -- Telescope
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
