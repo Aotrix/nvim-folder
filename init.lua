@@ -12,19 +12,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- lazy setup
-require("lazy").setup({
+require('lazy').setup({
     -- Loading theme
     {  "rebelot/kanagawa.nvim",
     -- "ellisonleao/gruvbox.nvim",
     config = function()
-        require("theme/kanagawa")
+        require('theme/kanagawa')
     end,},
     
     -- LSP
     {
         {'VonHeikemen/lsp-zero.nvim',
         config = function()
-            require("autocomplete/autocomplete")
+            require('autocomplete/autocomplete')
         end
         },
         'neovim/nvim-lspconfig',
@@ -50,7 +50,7 @@ require("lazy").setup({
     },
     {"xiyaowong/transparent.nvim",
     config = function()
-	    enable = true
+        require('transparent/transparent')
     end},
 
     {
@@ -68,9 +68,18 @@ require("lazy").setup({
     end
     },
     {"rose-pine/neovim"},
-    {"tiagovla/tokyodark.nvim"}
+    {"tiagovla/tokyodark.nvim"},
+    -- Telescope
+    {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+-- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      config = function()
+          require('telescope/telescope')
+      end
+    }
 })
 
 -- nvim settings
-require("nvim_settings/set")
-require("nvim_settings/remap")
+require('nvim_settings/set')
+require('nvim_settings/remap')
