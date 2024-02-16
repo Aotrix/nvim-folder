@@ -14,3 +14,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("n", "<leader>pf", function() require("telescope.builtin").find_files() end)
+vim.keymap.set("n", "<leader>pg", function() require('telescope').extensions.live_grep_args.live_grep_args() end)
