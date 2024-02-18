@@ -60,22 +60,29 @@ require('lazy').setup({
     },
 
     {
-    'nvim-lualine/lualine.nvim',
-    -- dependencies = {'nvim-tree/nvim-web-devicons'},
-    config = function()
-        require('statusline/statusline')
-    end
+        'nvim-lualine/lualine.nvim',
+        -- dependencies = {'nvim-tree/nvim-web-devicons'},
+        config = function()
+            require('statusline/statusline')
+        end
     },
     -- Telescope
     {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
--- or                              , branch = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim',
-  'nvim-telescope/telescope-live-grep-args.nvim'},
-      config = function()
-          require('telescope/telescope')
-      end
-    }
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        -- or                              , branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-live-grep-args.nvim'},
+        config = function()
+            require('telescope/telescope')
+        end
+    },
+
+    {'ThePrimeagen/harpoon',
+    dependencies = {'nvim-lua/plenary.nvim'},
+    config = function()
+        require('harpoon/harpoon')
+    end
+    } 
 })
 
 -- nvim settings

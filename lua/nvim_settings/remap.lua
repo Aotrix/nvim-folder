@@ -16,4 +16,11 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>pf", function() require("telescope.builtin").find_files() end)
-vim.keymap.set("n", "<leader>pg", function() require('telescope').extensions.live_grep_args.live_grep_args() end)
+vim.keymap.set("n", "<leader>pg", function() require("telescope").extensions.live_grep_args.live_grep_args() end)
+
+vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
+vim.keymap.set("n", "<leader>hv", function() require("harpoon.ui").toggle_quick_menu() end)
+vim.keymap.set("n", "<C-t>", function() require("harpoon.ui").nav_file(1) end)
+vim.keymap.set("n", "<C-h>", function() require("harpoon.ui").nav_file(2) end)
+vim.keymap.set("n", "<C-m>", function() require("harpoon.ui").nav_file(3) end)
+vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(4) end)
