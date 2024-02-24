@@ -24,3 +24,8 @@ vim.keymap.set("n", "<C-t>", function() require("harpoon.ui").nav_file(1) end)
 vim.keymap.set("n", "<C-h>", function() require("harpoon.ui").nav_file(2) end)
 vim.keymap.set("n", "<C-m>", function() require("harpoon.ui").nav_file(3) end)
 vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(4) end)
+
+vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end)
+vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end)
+vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end)
+vim.keymap.set('n', 'gr', function() require('telescope.builtin').lsp_references() end, { noremap = true, silent = true })
