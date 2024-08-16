@@ -14,10 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 -- lazy setup
 require('lazy').setup({
     -- Loading theme
-    { "rose-pine/neovim",
-    config = function()
-        require('theme/rose-pine')
-    end,},
+    {
+        "EdenEast/nightfox.nvim",
+        config = function()
+            require('theme/nightfox')
+        end,},
     
     -- LSP
     {
@@ -58,6 +59,7 @@ require('lazy').setup({
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-live-grep-args.nvim',
+        'fannheyward/telescope-coc.nvim',
     },
         config = function()
             require('telescope/telescope')
