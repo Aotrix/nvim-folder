@@ -17,7 +17,7 @@ require('lazy').setup({
     {
         "EdenEast/nightfox.nvim",
         config = function()
-            require('theme/nightfox')
+            require('theme/duskfox')
         end,},
     
     -- LSP
