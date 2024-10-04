@@ -14,7 +14,13 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+if vim.fn.has('unix') == 1 then
+	vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+else
+	vim.opt.undodir = os.getenv("USERPROFILE") .. "/AppData/Local/nvim-data"
+end
+
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
