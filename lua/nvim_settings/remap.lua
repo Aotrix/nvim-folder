@@ -35,3 +35,17 @@ vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 
 -- Remove <C-c> because it is not fast enough
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<nop>')
+
+-- nvim-dap
+vim.keymap.set("n", "<space>b", function() require("dap").toggle_breakpoint() end)
+vim.keymap.set("n", "<space>gb", function() require("dap").run_to_cursor() end)
+-- Eval var under cursor
+vim.keymap.set("n", "<space>?", function()
+    require("dapui").eval(nil, { enter = true })
+end)
+vim.keymap.set("n", "<F1>", function() require("dap").continue() end)
+vim.keymap.set("n", "<F2>", function() require("dap").step_into() end)
+vim.keymap.set("n", "<F3>", function() require("dap").step_over() end)
+vim.keymap.set("n", "<F4>", function() require("dap").step_out() end)
+vim.keymap.set("n", "<F5>", function() require("dap").step_back() end)
+vim.keymap.set("n", "<F13>", function() require("dap").restart() end)

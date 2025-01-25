@@ -14,64 +14,86 @@ vim.opt.rtp:prepend(lazypath)
 -- lazy setup
 require('lazy').setup({
     -- Loading theme
-    {
+{
         "EdenEast/nightfox.nvim",
         config = function()
             require('theme/duskfox')
-        end,},
+        end,
+},
     
     -- LSP
-    {
+{
          -- Autocompletion
         {'neoclide/coc.nvim' ,
         config = function()
             require('autocomplete/autocomplete')
         end ,
         branch="release"
-        },
+	},
 
          -- Snippets
          'L3MON4D3/LuaSnip' ,    -- Required
          'rafamadriz/friendly-snippets' , -- Optional
-    },
-    {"xiyaowong/transparent.nvim",
-    config = function()
-        require('transparent/transparent')
-    end},
+},
 
-    {
+{
+	"xiyaowong/transparent.nvim",
+	config = function()
+		require('transparent/transparent')
+	end
+},
+
+{
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require('treesitter/treesitter')
         end
-    },
+},
 
-    {
+{
         'nvim-lualine/lualine.nvim',
         -- dependencies = {'nvim-tree/nvim-web-devicons'},
         config = function()
             require('statusline/statusline')
         end
-    },
+},
+
     -- Telescope
-    {
+{
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-live-grep-args.nvim',
         'fannheyward/telescope-coc.nvim',
-    },
+    	},
         config = function()
             require('telescope/telescope')
         end
-    },
+},
 
-    {'ThePrimeagen/harpoon',
-    dependencies = {'nvim-lua/plenary.nvim'},
-    config = function()
-        require('harpoon/harpoon')
-    end
-    } 
+{
+        'ThePrimeagen/harpoon',
+        dependencies = {'nvim-lua/plenary.nvim'},
+        config = function()
+            require('harpoon/harpoon')
+        end
+},
+
+{
+       'mfussenegger/nvim-dap',
+       dependencies = {
+            'rcarriga/nvim-dap-ui',
+            'theHamsta/nvim-dap-virtual-text',
+            'nvim-neotest/nvim-nio',
+            'williamboman/mason.nvim',
+       },
+       config = function()
+           require('nvim_dap/nvim_dap')
+       end
+},
+    
+
+
 })
 
 -- nvim settings
