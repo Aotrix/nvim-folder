@@ -91,8 +91,6 @@ require('lazy').setup({
            require('nvim_dap/nvim_dap')
        end
 },
-    
-
 
 })
 
