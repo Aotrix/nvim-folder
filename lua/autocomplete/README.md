@@ -1,2 +1,0 @@
-### Source
-https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/
