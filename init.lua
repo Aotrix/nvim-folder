@@ -65,6 +65,7 @@ require('lazy').setup({
         dependencies = { 'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-live-grep-args.nvim',
         'fannheyward/telescope-coc.nvim',
+        'nvim-telescope/telescope-file-browser.nvim'
     	},
         config = function()
             require('telescope/telescope')
