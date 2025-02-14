@@ -63,14 +63,14 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope-live-grep-args.nvim',
-    'fannheyward/telescope-coc.nvim',
-    'nvim-telescope/telescope-file-browser.nvim',
-    {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'}
-},
-config = function()
-    require('telescope/telescope')
-end
+        'nvim-telescope/telescope-live-grep-args.nvim',
+        'fannheyward/telescope-coc.nvim',
+        'nvim-telescope/telescope-file-browser.nvim',
+        {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'}
+    },
+    config = function()
+        require('telescope/telescope')
+    end
 },
 
 {
@@ -100,3 +100,6 @@ end
 require('nvim_settings/set')
 require('nvim_settings/remap')
 require('nvim_settings/lsp')
+
+-- Custom grep from TJ
+require('telescope/multigrep').setup()

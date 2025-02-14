@@ -16,8 +16,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>pv", function() require("telescope").extensions.file_browser.file_browser() end)
 vim.keymap.set("n", "<leader>pf", function() require("telescope.builtin").find_files() end)
-vim.keymap.set("n", "<leader>pg", function() require("telescope").extensions.live_grep_args.live_grep_args() end)
--- vim.keymap.set("n", "<leader>s", function() require("telescope").extensions.coc.document_symbols() end)
 vim.keymap.set("n", "<leader>s", function() require("telescope.builtin").treesitter() end)
 
 vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
@@ -39,10 +37,10 @@ vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<nop>')
 
 -- nvim-dap
-vim.keymap.set("n", "<space>b", function() require("dap").toggle_breakpoint() end)
-vim.keymap.set("n", "<space>gb", function() require("dap").run_to_cursor() end)
+vim.keymap.set("n", "<leader>b", function() require("dap").toggle_breakpoint() end)
+vim.keymap.set("n", "<leader>gb", function() require("dap").run_to_cursor() end)
 -- Eval var under cursor
-vim.keymap.set("n", "<space>?", function()
+vim.keymap.set("n", "<leader>?", function()
     require("dapui").eval(nil, { enter = true })
 end)
 vim.keymap.set("n", "<F1>", function() require("dap").continue() end)
