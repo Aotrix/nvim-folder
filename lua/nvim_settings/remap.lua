@@ -28,10 +28,10 @@ vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(4) end)
 -- GoTo code navigation
 vim.keymap.set("n", "gD", "<Plug>(coc-declaration)", {silent = true})
 vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
-vim.keymap.set("n", "K", "<CMD>lua _G.show_docs()<CR>", {silent = true})
 vim.keymap.set("n", "gr", "<CMD>Telescope coc references<CR>", {silent = true})
 vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
 -- Remove <C-c> because it is not fast enough
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<nop>')
