@@ -14,24 +14,13 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set("n", "<leader>pv", function() require("telescope").extensions.file_browser.file_browser() end)
-vim.keymap.set("n", "<leader>pf", function() require("telescope.builtin").find_files() end)
-vim.keymap.set("n", "<leader>s", function() require("telescope.builtin").treesitter() end)
-
-vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
-vim.keymap.set("n", "<leader>hv", function() require("harpoon.ui").toggle_quick_menu() end)
-vim.keymap.set("n", "<C-t>", function() require("harpoon.ui").nav_file(1) end)
-vim.keymap.set("n", "<C-h>", function() require("harpoon.ui").nav_file(2) end)
-vim.keymap.set("n", "<C-m>", function() require("harpoon.ui").nav_file(3) end)
-vim.keymap.set("n", "<C-l>", function() require("harpoon.ui").nav_file(4) end)
-
 -- GoTo code navigation
-vim.keymap.set("n", "gD", "<Plug>(coc-declaration)", {silent = true})
-vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
-vim.keymap.set("n", "gr", "<CMD>Telescope coc references<CR>", {silent = true})
-vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
-vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
-vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
+-- vim.keymap.set("n", "gD", "<Plug>(coc-declaration)", {silent = true})
+-- vim.keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
+-- vim.keymap.set("n", "gr", "<CMD>Telescope coc references<CR>", {silent = true})
+-- vim.keymap.set("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+-- vim.keymap.set("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+-- vim.keymap.set("n", "K", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
 -- Remove <C-c> because it is not fast enough
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<nop>')
