@@ -1,11 +1,9 @@
 return {
     'mfussenegger/nvim-dap',
     dependencies = {
-        'rcarriga/nvim-dap-ui',
-        'theHamsta/nvim-dap-virtual-text',
-        'nvim-neotest/nvim-nio',
-        'williamboman/mason.nvim',
-        'jay-babu/mason-nvim-dap.nvim',
+        'rcarriga/nvim-dap-ui', 'theHamsta/nvim-dap-virtual-text',
+        'nvim-neotest/nvim-nio', 'williamboman/mason.nvim',
+        'jay-babu/mason-nvim-dap.nvim'
     },
 
     config = function()
@@ -15,13 +13,11 @@ return {
         require("dapui").setup()
         require("nvim-dap-virtual-text").setup()
         require("mason").setup()
-        require("mason-nvim-dap").setup({
-            ensure_installed = { "codelldb" }
-        })
+        require("mason-nvim-dap").setup({ensure_installed = {"codelldb"}})
 
         dap.adapters.codelldb = {
             type = "executable",
-            command = "codelldb", -- or if not in $PATH: "/absolute/path/to/codelldb"
+            command = "codelldb" -- or if not in $PATH: "/absolute/path/to/codelldb"
         }
 
         dap.configurations.cpp = {
@@ -30,19 +26,16 @@ return {
                 type = "codelldb",
                 request = "launch",
                 program = function()
-                    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                    return vim.fn.input('Path to executable: ',
+                                        vim.fn.getcwd() .. '/', 'file')
                 end,
                 cwd = '${workspaceFolder}',
-                stopOnEntry = false,
-            },
+                stopOnEntry = false
+            }
         }
 
-        dap.listeners.before.attach.dapui_config = function()
-            ui.open()
-        end
-        dap.listeners.before.launch.dapui_config = function()
-            ui.open()
-        end
+        dap.listeners.before.attach.dapui_config = function() ui.open() end
+        dap.listeners.before.launch.dapui_config = function() ui.open() end
         dap.listeners.before.event_terminated.dapui_config = function()
             ui.close()
         end
@@ -50,11 +43,13 @@ return {
             ui.close()
         end
 
-        vim.keymap.set("n", "<leader>b", function() require("dap").toggle_breakpoint() end)
-        vim.keymap.set("n", "<leader>gb", function() require("dap").run_to_cursor() end)
+        vim.keymap.set("n", "<leader>b",
+                       function() require("dap").toggle_breakpoint() end)
+        vim.keymap.set("n", "<leader>gb",
+                       function() require("dap").run_to_cursor() end)
         -- Eval var under cursor
         vim.keymap.set("n", "<leader>?", function()
-            require("dapui").eval(nil, { enter = true })
+            require("dapui").eval(nil, {enter = true})
         end)
         vim.keymap.set("n", "<F1>", function() require("dap").continue() end)
         vim.keymap.set("n", "<F2>", function() require("dap").step_into() end)
@@ -63,6 +58,6 @@ return {
         vim.keymap.set("n", "<F5>", function() require("dap").step_back() end)
         vim.keymap.set("n", "<F13>", function() require("dap").restart() end)
 
-    end,
+    end
 }
 
