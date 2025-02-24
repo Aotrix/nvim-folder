@@ -5,6 +5,7 @@ return {
         'theHamsta/nvim-dap-virtual-text',
         'nvim-neotest/nvim-nio',
         'williamboman/mason.nvim',
+        'jay-babu/mason-nvim-dap.nvim',
     },
 
     config = function()
@@ -14,6 +15,9 @@ return {
         require("dapui").setup()
         require("nvim-dap-virtual-text").setup()
         require("mason").setup()
+        require("mason-nvim-dap").setup({
+            ensure_installed = { "codelldb" }
+        })
 
         dap.adapters.codelldb = {
             type = "executable",
