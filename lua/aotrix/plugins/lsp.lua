@@ -24,7 +24,12 @@ return {
                                fname) or
                            require("lspconfig.util").find_git_ancestor(fname)
             end,
-            capabilities = {offsetEncoding = {"utf-16"}},
+            capabilities = {
+                offsetEncoding = {"utf-16"},
+                textDocument = {
+                    completion = {completionItem = {snippetSupport = true}}
+                }
+            },
             cmd = {
                 "clangd", "--background-index", "--clang-tidy",
                 "--header-insertion=iwyu", "--completion-style=detailed",
