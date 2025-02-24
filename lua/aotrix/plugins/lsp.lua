@@ -36,5 +36,7 @@ return {
         })
 
         vim.keymap.set("n", "<leader>o", "<cmd>ClangdSwitchSourceHeader<cr>")
+
+        require('lspconfig').cmake.setup({})
     end,
 }
