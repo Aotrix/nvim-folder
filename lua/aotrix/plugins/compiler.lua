@@ -9,9 +9,12 @@ return {
                     min_height = 25,
                     max_height = 25,
                     default_detail = 1,
-                    bindings = {["q"] = function()
-                        vim.cmd("OverseerClose")
-                    end}
+                    bindings = {
+                        -- ["q"] = function()
+                        --     vim.cmd("OverseerClose")
+                        --     print("Coucou")
+                        -- end
+                    }
                 }
             },
             config = function(_, opts)
