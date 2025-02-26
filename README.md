@@ -12,3 +12,9 @@ sudo pacman -S clang lldb cmake make
 
 You can also use Mason to install the first two tools.
 - Some formatters are used in this config, please check `~/.config/nvim/lua/aotrix/plugins/autoformat.lua` and install or remove the ones you need.
+
+# Notes
+in order to toggle transparency, execute this command in neovim:
+```
+:TransparentToggle
+```
