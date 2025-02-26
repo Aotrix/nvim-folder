@@ -1,0 +1,3 @@
+-- use :!cmake --build PATH_TO_BUILD_FOLDER
+-- && Telescope to choose executable in PATH_TO_BUILD_FOLDER/EXECUTABLE_FOLDER/*
+-- Then launch executable in a normal terminal - not nvim one
