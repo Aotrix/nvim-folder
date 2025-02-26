@@ -1,4 +1,4 @@
-# How to install
+## How to use this project
 - Clone the project in ~/.config/nvim folder
 This is a C++ neovim config which uses clang to analyse your code and LLDB to debug it. Thus, make sure that these tools installed on your system.
 
@@ -9,4 +9,4 @@ sudo pacman -S lldb
 ```
 
 You can also use Mason to install these tools.
-Some formatters are used in this config, please check `~/.config/nvim/lua/aotrix/plugins/autoformat.lua` and install or remove the ones you need.
+- Some formatters are used in this config, please check `~/.config/nvim/lua/aotrix/plugins/autoformat.lua` and install or remove the ones you need.
