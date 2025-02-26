@@ -1,5 +1,6 @@
 ## How to install this config
-- Clone the project in ~/.config/nvim folder
+- Clone the project in ~/.config/nvim folder.
+
 This is a C++ neovim config which uses clang to analyse your code and LLDB to debug it. Thus, make sure that these tools installed on your system.
 
 On Arch based systems:
