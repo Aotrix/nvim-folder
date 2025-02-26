@@ -69,5 +69,6 @@ return {
             cmake_virtual_text_support = false -- Show the target related to current file using virtual text (at right corner)
         }
         vim.keymap.set("n", "mt", "<CMD>CMakeRun<CR>")
+        vim.keymap.set("n", "ms", "<CMD>CMakeSelectLaunchTarget<CR>")
     end
 }
