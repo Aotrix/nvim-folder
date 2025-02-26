@@ -11,6 +11,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require('aotrix.set')
 require('aotrix.remap')
-require('aotrix.nvim_term')
-require('aotrix.cmake_autorun')
 require('lazy').setup('aotrix.plugins')
