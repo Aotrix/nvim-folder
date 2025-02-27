@@ -4,7 +4,7 @@
 This is a C++ oriented neovim config which uses clang to analyse your code and LLDB to debug it. Thus, make sure that these tools are installed on your system.
 
 ## Requirements
-- Neovim 0.10+
+- Neovim >= 0.10
 - The following packages (please adapt to your distribution):
 ```bash
 sudo pacman -S clang lldb cmake make
