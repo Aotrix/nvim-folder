@@ -4,16 +4,13 @@ return {
         require('lualine').setup({
             options = {
                 icons_enabled = false,
-                theme = 'material',
-                component_separators = { left = '', right = ''},
-                section_separators = { left = '', right = ''},
-                disabled_filetypes = {
-                    statusline = {},
-                    winbar = {},
-                },
+                theme = 'gruvbox',
+                component_separators = {left = '', right = ''},
+                section_separators = {left = '', right = ''},
+                disabled_filetypes = {statusline = {}, winbar = {}},
                 ignore_focus = {},
                 always_divide_middle = true,
-                globalstatus = false,
+                globalstatus = false
             },
             sections = {
                 lualine_a = {'mode'},
