@@ -7,7 +7,7 @@ This is a C++ oriented neovim config which uses clang to analyse your code and L
 - Neovim >= 0.10
 - The following packages (please adapt to your distribution):
 ```bash
-sudo pacman -S clang lldb cmake make
+sudo pacman -S clang lldb cmake make unzip python
 ```
 
 You can also use Mason to install the first two tools.
