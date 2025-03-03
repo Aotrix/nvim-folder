@@ -21,6 +21,7 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
         end
     end
 })
+local current_quickfix_line = 1
 vim.keymap.set("n", "<leader>q", function()
     if #vim.diagnostic.get() > 0 then
         if quickfix_is_open then
@@ -29,24 +30,29 @@ vim.keymap.set("n", "<leader>q", function()
         else
             vim.diagnostic.setqflist()
             vim.cmd.cfirst()
+            current_quickfix_line = 1
         end
     end
 end)
 vim.keymap.set("n", "<M-j>", function()
     if #vim.diagnostic.get() > 0 and quickfix_is_open then
-        if #vim.diagnostic.get() == 1 then
-            vim.cmd.cfirst()
+        if current_quickfix_line < nb_elements_quickfix then
+            vim.cmd.cnext()
+            current_quickfix_line = current_quickfix_line + 1
         else
-            vim.diagnostic.goto_next({float = false})
+            vim.cmd.cfirst()
+            current_quickfix_line = 1
         end
     end
 end)
 vim.keymap.set("n", "<M-k>", function()
     if #vim.diagnostic.get() > 0 and quickfix_is_open then
-        if #vim.diagnostic.get() == 1 then
-            vim.cmd.cfirst()
+        if current_quickfix_line > 1 then
+            vim.cmd.cprev()
+            current_quickfix_line = current_quickfix_line - 1
         else
-            vim.diagnostic.goto_prev({float = false})
+            vim.cmd.clast()
+            current_quickfix_line = nb_elements_quickfix
         end
     end
 end)
