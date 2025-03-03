@@ -16,10 +16,3 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Remove <C-c> because it is not fast enough
 vim.keymap.set({'n', 'i', 'v'}, '<C-c>', '<nop>')
-
--- Quickfix
-vim.keymap.set("n", "<leader>q", function() vim.diagnostic.setqflist() end)
-vim.keymap.set("n", "<M-j>", "<cmd>:cnext<CR>")
-vim.keymap.set("n", "<M-k>", "<cmd>:cprev<CR>")
-vim.keymap.set("n", "<M-f>", "<cmd>:cfirst<CR>")
-vim.keymap.set("n", "<M-l>", "<cmd>:clast<CR>")

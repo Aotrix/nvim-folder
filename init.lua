@@ -11,4 +11,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require('aotrix.set')
 require('aotrix.remap')
+require('aotrix.quickfix')
 require('lazy').setup('aotrix.plugins')
