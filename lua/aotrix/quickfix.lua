@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd('DiagnosticChanged', {
         if quickfix_is_open then
             if nb_elements_quickfix == 0 then
                 quickfix_is_open = false
-                vim.cmd.cclose()
+                vim.defer_fn(function() vim.cmd.cclose() end, 0)
             else
                 vim.diagnostic.setqflist()
             end
