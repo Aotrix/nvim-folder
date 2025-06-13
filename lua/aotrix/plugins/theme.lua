@@ -1,4 +1,4 @@
 return {
-    "EdenEast/nightfox.nvim",
-    config = function() vim.cmd("colorscheme duskfox") end
+    "junegunn/seoul256.vim",
+    config = function() vim.cmd("colorscheme seoul256-light") end
 }
