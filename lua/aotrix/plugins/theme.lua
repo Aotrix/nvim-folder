@@ -1,4 +1,4 @@
 return {
     "junegunn/seoul256.vim",
-    config = function() vim.cmd("colorscheme seoul256-light") end
+    config = function() vim.cmd("colorscheme seoul256") end
 }
