@@ -1,4 +1,4 @@
 return {
-    "junegunn/seoul256.vim",
-    config = function() vim.cmd("colorscheme seoul256") end
+    "morhetz/gruvbox",
+    config = function() vim.cmd("colorscheme gruvbox") end
 }
