@@ -71,5 +71,6 @@ return {
         vim.keymap.set("n", "mt", "<CMD>CMakeRun<CR>")
         vim.keymap.set("n", "mT", "<CMD>CMakeDebug<CR>")
         vim.keymap.set("n", "ms", "<CMD>CMakeSelectLaunchTarget<CR>")
+        vim.keymap.set("n", "mc", "<CMD>CMakeClean<CR>")
     end
 }
